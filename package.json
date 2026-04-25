@@ -1,0 +1,26 @@
+{
+  "name": "@earendil-works/pi-draw",
+  "version": "0.1.0",
+  "description": "A pi extension that opens a tldraw canvas and submits drawings as prompt image attachments.",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "tldraw",
+    "drawing",
+    "canvas"
+  ],
+  "files": [
+    "draw.ts",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*"
+  },
+  "pi": {
+    "extensions": [
+      "./draw.ts"
+    ]
+  }
+}
