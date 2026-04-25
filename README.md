@@ -14,7 +14,7 @@ window, press `Ctrl+Shift+C` or run `/draw` again to reopen it.
 ## Install
 
 ```bash
-pi install https://github.com/earendil-works/pi-draw
+pi install https://github.com/mitsuhiko/pi-draw
 ```
 
 For local development from this checkout:
