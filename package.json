@@ -1,5 +1,5 @@
 {
-  "name": "@earendil-works/pi-draw",
+  "name": "pi-draw",
   "version": "0.1.0",
   "description": "A pi extension that opens a tldraw canvas and submits drawings as prompt image attachments.",
   "license": "MIT",
