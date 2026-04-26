@@ -180,14 +180,12 @@ export default function (pi: ExtensionAPI) {
 		const urlBase = await ensureServer();
 		const url = `${urlBase}/draw?token=${encodeURIComponent(token)}`;
 
-		if (pageConnected) {
-			ctx.ui.notify("Drawing canvas is already open. Click Submit there to add screenshots to the prompt.", "info");
-			return;
-		}
-
 		try {
 			await openBrowser(url);
-			ctx.ui.notify("Drawing canvas opened. Click Submit to add a screenshot to the prompt.", "info");
+			const message = pageConnected
+				? "Drawing canvas reopened. Click Submit to add a screenshot to the prompt."
+				: "Drawing canvas opened. Click Submit to add a screenshot to the prompt.";
+			ctx.ui.notify(message, "info");
 		} catch (error) {
 			ctx.ui.notify(`Could not open browser: ${error instanceof Error ? error.message : String(error)}. Open ${url} manually.`, "error");
 		}
